@@ -35,14 +35,12 @@ jobs:
         git clone --depth=1 https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
-        mkdir -p /opt/images/
-        
+        mkdir -p /opt/images/  
      - name: Set Golang
        run: |
         cd /opt/hostedtoolcache/go
         rm -rf /opt/hostedtoolcache/go/1.14.13
-        mv 1.15.6 1.14.13
-             
+        mv 1.15.6 1.14.13           
     - name: Build Firmware
       env:
         TNAME: NEWIFI3
